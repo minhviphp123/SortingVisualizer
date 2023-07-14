@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+.sorting-visualizer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.array-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.array-bar {
+    width: 5px;
+    margin-right: 2px;
+    background-color: rgb(73, 73, 202);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+button:hover:enabled {
+    background-color: #ddd;
+}
+
+.array-bar.red {
+    background-color: red;
+}
+
+.array-bar.blue {
+    background-color: rgb(73, 73, 202);
+}
+
+.array-bar.green {
+    background-color: green;
 }
